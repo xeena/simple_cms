@@ -1,0 +1,35 @@
+<h1>Demo#hello</h1>
+<p>hello.html.erb</p>
+<p>Hello World!</p>
+
+<%= 1+1 %>
+<br />
+
+<% target = "world" %>
+<%= "Hello #{target}" %>
+
+<br/>
+<% 3.times do %>
+	<%= "xxx" %>
+	<br />
+<% end %>
+
+<br />
+<% @arr.each do |n| %>
+	<%= "ranking #{n}" %><br/>
+<% end %>
+
+
+
+<br />
+<br />
+<a href="/demo/index">Index page 1</a><br/>
+<%= link_to('Index page 2', {:action => 'index'}) %>
+
+<br />
+ID: <%= params[:id] %><br />
+ID: <%= @id %><br />
+Next Page : <%= @page.to_i + 1 %><br />
+
+<hr />
+<%= params.inspect %>
