@@ -19,6 +19,7 @@ class SubjectsController < ApplicationController
 		# Save the object
 		if @subject.save
 		# If save suceeds, redirect to the index action
+			flash[:notice] = "주제가 성공적으로 만들어졌습니다.(Subject created successfully)"
 			redirect_to(:action => 'index')
 		else
 		# If save fails, redisplay the form so user can fix problems
@@ -36,6 +37,7 @@ class SubjectsController < ApplicationController
 		# Update the object
 		if @subject.update_attributes(subject_params)
 		# If update suceeds, redirect to the index action
+			flash[:notice] = "주제가 성공적으로 갱신되었습니다.(Subject updated successfully)"
 			redirect_to(:action => 'show', :id => @subject.id)
 		else
 		# If update fails, redisplay the form so user can fix problems
@@ -49,6 +51,7 @@ class SubjectsController < ApplicationController
 
 	def destroy
 		subject = Subject.find(params[:id]).destroy
+		flash[:notice] = "삭제완료(Subject '#{subject.name}' destroyed successfully)"
 		redirect_to(:action => 'index')
 	end
 
