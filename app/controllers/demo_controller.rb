@@ -1,5 +1,5 @@
 class DemoController < ApplicationController
-	layout false
+#	layout 'demo'
 
   def index
 		@arr = ["Wish", "Me", "Luck"]
@@ -20,4 +20,15 @@ class DemoController < ApplicationController
 		redirect_to("http://lynda.com")
 	end
 
+	def text_helpers
+	end
+
+	def escape_output
+	end
+
+	def erika_kirihara
+	end
+
+	def hara_saori
+	end
 end

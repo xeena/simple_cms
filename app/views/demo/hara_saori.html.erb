@@ -1,0 +1,11 @@
+<h2>Hara Saori</h2>
+<a href="/demo/index">Demo page</a><br/>
+<hr />
+<% (1..91).each do |n|
+	if n < 10
+		n = "0" + n.to_s
+	end
+%>
+<br />
+	<%= image_tag("HaraSaori/0#{n}.jpg", :width => "800") %>
+<% end %>

@@ -7,5 +7,14 @@
 
 <a href="/demo/hello">Hello page 1</a><br/>
 <%= link_to('Hello page 2', {:action => 'hello'}) %><br />
+<%= link_to('Erika Kirihara', {:action => 'erika_kirihara'}) %><br />
+<%= link_to('Hara Saori', {:action => 'hara_saori'}) %><br />
 <%= link_to('Hello with parameters', {:action => 'hello', :page => 5, :id => 20}) %><br />
 <%= link_to('Simple CMS Subject', {:controller => 'subjects', :action => 'index'}) %><br />
+<%= link_to('Simple CMS Page', {:controller => 'pages', :action => 'index'}) %><br />
+<%= link_to('Simple CMS Section', {:controller => 'sections', :action => 'index'}) %><br />
+<br/>
+
+<%= link_to('Roar', '#', :onclick => "jsRoar('JavaScript'); return true;") %>
+<%= javascript_tag("jsRoar('Rails');") %>
+
