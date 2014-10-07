@@ -8,7 +8,7 @@
 	<div><%= pluralize(@subjects.size, 'subject') %> found</div>
 	<table class="listing" summary="Subject list">
 		<tr class="header">
-			<th>&nbsp;</th>
+			<th>Pn</th>
 			<th>Subject</th>
 			<th>Visible</th>
 			<th>Pages</th>
@@ -17,7 +17,7 @@
 		<% @subjects.each do |subject| %>
 			<tr class="<%= cycle('odd', 'even') %>">
 				<td><%= subject.position %></td>
-				<td><%= subject.name %></td>
+				<td><%= link_to(subject.name, {:action => 'show', :id => subject.id}) %></td>
 				<td class="center"><%= status_tag(subject.visible) %></td>
 				<td class="center"><%= subject.pages.size %></td>
 				<td class="actions">

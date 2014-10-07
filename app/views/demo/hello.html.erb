@@ -31,5 +31,8 @@ ID: <%= params[:id] %><br />
 ID: <%= @id %><br />
 Next Page : <%= @page.to_i + 1 %><br />
 
+<%= link_to('Roar', '#', :onclick => "jsRoar('JavaScript'); return true;") %>
+<%= javascript_tag("jsRoar('Rails');") %>
 <hr />
+
 <%= params.inspect %>
